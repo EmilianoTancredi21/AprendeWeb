@@ -1,12 +1,13 @@
 (function () {
-  const openButton = document.querySelector(".nav__menu");
-  const menu = document.querySelector(".nav__link");
-  const closeMenu = document.querySelector(".nav__close");
+  const openButton = document.querySelector(".navigation__menu");
+  const menu = document.querySelector(".navigation__links");
+  const closeMenu = document.querySelector(".navigation__close");
 
-  openButton.addEventListener("click", toggleMenu);
-  closeMenu.addEventListener("click", toggleMenu);
+  openButton.addEventListener("click", () => {
+    menu.classList.add("navigation__link--show");
+  });
 
-  function toggleMenu() {
-    menu.classList.toggle("nav__link--show");
-  }
+  closeMenu.addEventListener("click", () => {
+    menu.classList.remove("navigation__link--show");
+  });
 })();
